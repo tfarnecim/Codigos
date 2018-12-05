@@ -43,6 +43,8 @@ int main(){
 
     }
 
+    cout << dia-1 << endl;
+    
     for(int i=0;i<n;i++){
 
         cout << saida[i] << " ";
