@@ -12,8 +12,6 @@ int main(){
 	ll mult = 1;
 	ll at = 1;
 	
-	s += 'b';
-	
 	for(ll i=0;i<s.length();i++){
 		
 		if(s[i]=='b'){
