@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-long long tree[600000];
+long long tree[300000];
 long long arr[300000];
 
 void build(long long l,long long r,long long no){
@@ -73,52 +73,54 @@ int main(){
 	
 	long long n,k;
 	
-	cin >> n >> k;
+	while(cin >> n >> k){
 		
-	for(long long i=0;i<n;i++){
-		
-		cin >> arr[i];
-		
-	}
-	
-	string s;
-	
-	build(0,n-1,1);
-	
-	for(long long i=0;i<k;i++){
-		
-		char q;
-		long long a,b;
-		
-		cin >> q >> a >> b;
-		
-		if(q=='P'){
+		for(long long i=0;i<n;i++){
 			
-			long long resp = query(0,n-1,1,a-1,b-1);
-			
-			if(resp > 0){
-				
-				s+='+';
-				
-			}else if(resp < 0){
-				
-				s+='-';
-				
-			}else{
-				
-				s+='0';
-				
-			}
-			
-		}else{
-			
-			update(0,n-1,1,b,a-1);
+			cin >> arr[i];
 			
 		}
 		
+		string s;
+		
+		build(0,n-1,1);
+		
+		for(long long i=0;i<k;i++){
+			
+			char q;
+			long long a,b;
+			
+			cin >> q >> a >> b;
+			
+			if(q=='P'){
+				
+				long long resp = query(0,n-1,1,a-1,b-1);
+				
+				if(resp > 0){
+					
+					s+='+';
+					
+				}else if(resp < 0){
+					
+					s+='-';
+					
+				}else{
+					
+					s+='0';
+					
+				}
+				
+			}else{
+				
+				update(0,n-1,1,b,a-1);
+				
+			}
+			
+		}
+		
+		cout << s << endl;
+		
 	}
-	
-	cout << s << endl;
 	
 	return 0;
 }
