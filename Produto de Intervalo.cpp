@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-long long tree[300000];
+long long tree[600000];
 long long arr[300000];
 
 void build(long long l,long long r,long long no){
