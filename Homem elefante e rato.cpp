@@ -16,7 +16,7 @@ void propagate(int no,int l,int r){
 	
 	if(l!=r){
 	    lazy[no*2] += lazy[no];
-		lazy[no*2+1] += lazy[no];
+	    lazy[no*2+1] += lazy[no];
 	}
 	
 	lazy[no] = 0;
