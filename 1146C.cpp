@@ -27,7 +27,7 @@ int main(){
 		int ini = 2;
 		int fim = n;
 		
- 	    while(fim - ini > 0){
+ 	    	while(fim - ini > 0){
 			
 			int mid = (ini+fim)/2;//3
 			
